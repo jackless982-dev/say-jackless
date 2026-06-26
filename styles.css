@@ -1,0 +1,286 @@
+:root {
+  --ink: #17110f;
+  --wine: #5a0610;
+  --paper: #efe3d6;
+  --line: rgba(255, 250, 244, 0.86);
+  --white: #fffaf4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+.site-header {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 76px;
+  padding: 18px clamp(18px, 4vw, 48px);
+  color: var(--white);
+  background: rgba(23, 17, 15, 0.96);
+  border-bottom: 1px solid rgba(255, 250, 244, 0.14);
+}
+
+.brand {
+  display: grid;
+  gap: 2px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.brand span {
+  color: #dbcab8;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.brand strong {
+  font-size: clamp(1rem, 2vw, 1.28rem);
+  font-weight: 950;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 3vw, 30px);
+  font-size: 0.92rem;
+  font-weight: 850;
+}
+
+.nav-links a {
+  padding: 8px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-links a:hover {
+  border-color: currentColor;
+}
+
+.site-main {
+  min-height: 0;
+  padding: 0;
+  background: var(--paper);
+}
+
+.campaign-board {
+  display: grid;
+  width: 100%;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.top-mosaic {
+  display: grid;
+  grid-template-columns: 52% 48%;
+  height: 68vw;
+  min-height: 420px;
+  border-bottom: 2px solid var(--line);
+}
+
+.license-panel {
+  overflow: hidden;
+  background: var(--paper);
+  border-right: 2px solid var(--line);
+}
+
+.license-panel img {
+  object-fit: cover;
+  object-position: 50% 36%;
+}
+
+.lookbook-mosaic {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--line);
+}
+
+.look-tile {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  background-image: url("images/lookbook-grid.png");
+  background-repeat: no-repeat;
+  background-size: auto 200%;
+}
+
+.look-one {
+  background-position: 17% 0%;
+}
+
+.look-two {
+  background-position: 83% 0%;
+}
+
+.look-three {
+  background-position: 17% 100%;
+}
+
+.look-four {
+  background-position: 83% 100%;
+}
+
+.runway-panel {
+  height: 42vw;
+  min-height: 260px;
+  overflow: hidden;
+  border-bottom: 2px solid var(--line);
+}
+
+.runway-panel img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.climate-panels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 37.5vw;
+  border-bottom: 0;
+}
+
+.benefit-panel {
+  position: relative;
+  overflow: hidden;
+  background: #9c9288;
+}
+
+.benefit-panel + .benefit-panel {
+  border-left: 2px solid var(--line);
+}
+
+.benefit-panel img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.campaign-slogan {
+  display: grid;
+  place-items: center;
+  min-height: clamp(78px, 11vw, 120px);
+  padding: 10px 18px 14px;
+  color: var(--wine);
+  background: #f8efe8;
+  border-top: 2px solid var(--line);
+  text-align: center;
+}
+
+.campaign-slogan h1 {
+  margin: 0;
+  font-size: clamp(1.28rem, 4vw, 2rem);
+  font-weight: 950;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.slogan-mark {
+  display: block;
+  margin-top: 8px;
+  color: var(--wine);
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.site-footer {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px clamp(18px, 4vw, 48px);
+  color: var(--white);
+  background: var(--ink);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.footer-brand {
+  margin-bottom: 4px !important;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.site-footer p:not(.footer-brand),
+.site-footer a {
+  color: rgba(255, 250, 244, 0.74);
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 18px;
+}
+
+.site-footer a {
+  font-weight: 800;
+}
+
+.site-footer a:hover {
+  color: var(--white);
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    min-height: 68px;
+    padding: 14px 18px;
+  }
+
+  .nav-links {
+    font-size: 0.84rem;
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-links {
+    gap: 13px;
+  }
+
+  .brand strong {
+    font-size: 0.96rem;
+  }
+
+}

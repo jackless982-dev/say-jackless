@@ -104,8 +104,10 @@ figure {
 .top-mosaic {
   display: grid;
   grid-template-columns: 52% 48%;
-  height: 68vw;
-  min-height: 420px;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 25 / 8;
+  min-height: clamp(180px, 32vw, 420px);
   border-bottom: 2px solid var(--line);
 }
 
@@ -116,59 +118,40 @@ figure {
 }
 
 .license-panel img {
-  object-fit: cover;
-  object-position: 50% 36%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .lookbook-mosaic {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 2px;
+  overflow: hidden;
   background: var(--line);
 }
 
-.look-tile {
-  min-width: 0;
-  min-height: 0;
-  overflow: hidden;
-  background-image: url("images/lookbook-grid.png");
-  background-repeat: no-repeat;
-  background-size: auto 200%;
-}
-
-.look-one {
-  background-position: 17% 0%;
-}
-
-.look-two {
-  background-position: 83% 0%;
-}
-
-.look-three {
-  background-position: 17% 100%;
-}
-
-.look-four {
-  background-position: 83% 100%;
+.lookbook-mosaic img {
+  object-fit: contain;
+  object-position: center;
 }
 
 .runway-panel {
-  height: 42vw;
-  min-height: 260px;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1916 / 821;
   overflow: hidden;
+  background: var(--paper);
   border-bottom: 2px solid var(--line);
 }
 
 .runway-panel img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
 .climate-panels {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  height: 37.5vw;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 8 / 3;
   border-bottom: 0;
 }
 
@@ -183,7 +166,7 @@ figure {
 }
 
 .benefit-panel img {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -262,6 +245,36 @@ figure {
   .site-header {
     min-height: 68px;
     padding: 14px 18px;
+  }
+
+  .top-mosaic {
+    grid-template-columns: 1fr;
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+
+  .license-panel {
+    aspect-ratio: 3 / 4;
+    border-right: 0;
+    border-bottom: 2px solid var(--line);
+  }
+
+  .lookbook-mosaic {
+    aspect-ratio: 3 / 2;
+  }
+
+  .climate-panels {
+    grid-template-columns: 1fr;
+    aspect-ratio: auto;
+  }
+
+  .benefit-panel {
+    aspect-ratio: 4 / 3;
+  }
+
+  .benefit-panel + .benefit-panel {
+    border-top: 2px solid var(--line);
+    border-left: 0;
   }
 
   .nav-links {

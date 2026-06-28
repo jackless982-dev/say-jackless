@@ -38,8 +38,12 @@ const translations = {
     "home.climate.aria": "Nachhaltigkeits- und Klimavorteile",
     "home.sustainability.alt":
       "Rückansicht eines Say Jackless Shirts mit Erdmotiv",
+    "home.sustainability.copy.kicker": "Nachhaltigkeit",
+    "home.sustainability.copy.stat": "25% weniger Stoff!",
     "home.climate.alt":
       "Rückansicht eines Say Jackless Shirts mit leuchtendem Sonnenmotiv",
+    "home.climate.copy.kicker": "Klimaoptimiert",
+    "home.climate.copy.stat": "gegen Hitze",
     "home.slogan": "Lizenz für a better clima.",
     "footer.brand": "License Say Jackless",
     "footer.campaign": "Klimabewusste Menswear-Kampagne.",
@@ -144,8 +148,12 @@ const translations = {
     "home.climate.aria": "Sustainability and climate benefits",
     "home.sustainability.alt":
       "Back view of Say Jackless shirt with earth artwork",
+    "home.sustainability.copy.kicker": "Sustainability",
+    "home.sustainability.copy.stat": "25% less fabric!",
     "home.climate.alt":
       "Back view of Say Jackless shirt with glowing sun artwork",
+    "home.climate.copy.kicker": "Climate-optimized",
+    "home.climate.copy.stat": "against heat",
     "home.slogan": "License for a better clima.",
     "footer.brand": "License Say Jackless",
     "footer.campaign": "Climate-minded menswear campaign.",

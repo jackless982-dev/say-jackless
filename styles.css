@@ -259,6 +259,63 @@ figure {
   object-position: center;
 }
 
+.sustainability-panel,
+.heat-panel {
+  isolation: isolate;
+}
+
+.sustainability-copy,
+.benefit-copy {
+  position: absolute;
+  top: clamp(18px, 4vw, 48px);
+  left: clamp(18px, 4vw, 54px);
+  z-index: 1;
+  display: grid;
+  gap: clamp(5px, 0.9vw, 12px);
+  width: min(36%, 270px);
+  color: #fffaf4;
+  text-shadow: 0 2px 18px rgba(23, 17, 15, 0.58);
+  text-transform: uppercase;
+}
+
+.heat-copy {
+  right: clamp(18px, 4vw, 54px);
+  left: auto;
+  width: min(42%, 300px);
+}
+
+.sustainability-copy::before,
+.benefit-copy::before {
+  content: "";
+  position: absolute;
+  inset: -18px -16px -20px;
+  z-index: -1;
+  background:
+    linear-gradient(135deg, rgba(23, 17, 15, 0.74), rgba(90, 6, 16, 0.24)),
+    rgba(23, 17, 15, 0.18);
+  border: 1px solid rgba(255, 250, 244, 0.34);
+  box-shadow: 0 20px 50px rgba(23, 17, 15, 0.24);
+  backdrop-filter: blur(8px);
+}
+
+.sustainability-copy__kicker,
+.benefit-copy__kicker {
+  color: #f0c76e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(0.88rem, 1.9vw, 1.52rem);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 0.95;
+  overflow-wrap: anywhere;
+}
+
+.sustainability-copy__stat,
+.benefit-copy__stat {
+  font-size: clamp(1.05rem, 2.85vw, 2.34rem);
+  font-weight: 950;
+  line-height: 0.92;
+}
+
 .campaign-slogan {
   display: grid;
   place-items: center;
@@ -607,6 +664,17 @@ figure {
 
   .benefit-panel {
     aspect-ratio: 4 / 3;
+  }
+
+  .sustainability-copy,
+  .benefit-copy {
+    top: clamp(18px, 6vw, 34px);
+    left: clamp(18px, 6vw, 34px);
+    width: min(42%, 230px);
+  }
+
+  .heat-copy {
+    right: auto;
   }
 
   .benefit-panel + .benefit-panel {

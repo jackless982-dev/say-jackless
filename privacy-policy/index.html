@@ -7,30 +7,40 @@
     <title>Datenschutzerklärung | JACKLESS</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../legal.css">
+    <script src="../script.js" defer></script>
   </head>
-  <body class="legal-page">
+  <body
+    class="legal-page"
+    data-i18n-title="title.privacy"
+    data-i18n-description="meta.privacy.description"
+  >
     <header class="site-header">
-      <a class="brand" href="../index.html#campaign" aria-label="License Say Jackless home">
+      <a class="brand" href="../index.html#campaign" aria-label="License Say Jackless home" data-i18n-aria-label="brand.aria">
         <span>License</span>
         <strong>Say Jackless</strong>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="../index.html#campaign">Campaign</a>
-        <a href="../index.html#contact">Contact</a>
+      <nav class="nav-links" aria-label="Primary navigation" data-i18n-aria-label="nav.primary">
+        <a href="../index.html#campaign" data-i18n="nav.campaign">Campaign</a>
+        <a href="../contact-license.html" data-i18n="nav.license">License Request</a>
+        <a href="../index.html#contact" data-i18n="nav.contact">Contact</a>
       </nav>
+      <div class="language-switcher" aria-label="Switch language" data-i18n-aria-label="language.label">
+        <button type="button" data-language-option="de" aria-pressed="true" data-i18n="language.de">DE</button>
+        <button type="button" data-language-option="en" aria-pressed="false" data-i18n="language.en">EN</button>
+      </div>
     </header>
 
     <main class="site-main">
       <header class="legal-hero">
         <div class="legal-hero-inner">
-          <p class="legal-kicker">Datenschutz</p>
-          <h1>Datenschutzerklärung</h1>
-          <p class="legal-intro">Informationen zur Verarbeitung personenbezogener Daten beim Besuch von www.jackless.com.</p>
+          <p class="legal-kicker" data-i18n="legal.privacy.kicker">Datenschutz</p>
+          <h1 data-i18n="legal.privacy.heading">Datenschutzerklärung</h1>
+          <p class="legal-intro" data-i18n="legal.privacy.intro">Informationen zur Verarbeitung personenbezogener Daten beim Besuch von www.jackless.com.</p>
         </div>
       </header>
 
       <div class="legal-layout">
-        <article class="legal-document">
+        <article class="legal-document" data-lang="de">
           <section class="legal-section">
             <h2>1. Verantwortlicher</h2>
             <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
@@ -83,8 +93,9 @@
 
           <section class="legal-section">
             <h2>6. Kontaktformular</h2>
-            <p>Diese Website verwendet derzeit kein Kontaktformular.</p>
-            <p>Sollte zukünftig ein Kontaktformular eingebunden werden, wird diese Datenschutzerklärung entsprechend ergänzt.</p>
+            <p>Diese Website kann ein Formular für Lizenzanfragen bereitstellen. Wenn Sie dieses Formular nutzen, verarbeiten wir die von Ihnen eingegebenen Daten, insbesondere Name, E-Mail-Adresse, Telefonnummer, Unternehmen, Region, Land, Lizenzart und Nachricht.</p>
+            <p>Die Verarbeitung erfolgt zur Bearbeitung Ihrer Lizenzanfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit vorvertraglichen oder vertraglichen Maßnahmen zusammenhängt. In allen übrigen Fällen erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.</p>
+            <p>Eine automatische Bestätigungs-E-Mail an Besucher wird nicht versendet.</p>
           </section>
 
           <section class="legal-section">
@@ -176,18 +187,165 @@
             <p class="legal-note">Stand: Juni 2026</p>
           </section>
         </article>
+        <article class="legal-document" data-lang="en" hidden>
+          <section class="legal-section">
+            <h2>1. Controller</h2>
+            <p>The controller responsible for data processing on this website is:</p>
+            <address class="legal-address">
+              Mario Schlotfeldt<br>
+              Drachenbahn 19<br>
+              24159 Kiel<br>
+              Germany
+            </address>
+            <p>Email: <a href="mailto:info@jackless.com">info@jackless.com</a></p>
+          </section>
+
+          <section class="legal-section">
+            <h2>2. General information</h2>
+            <p>The protection of personal data is important to us. Personal data is any information that can directly or indirectly identify a natural person.</p>
+            <p>This website is used for the general presentation of Jackless. No goods are sold through this website, no user accounts are offered, and no login function is provided.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>3. Collection and processing of personal data when visiting the website</h2>
+            <p>When this website is accessed, information transmitted automatically by your browser to the server is processed. This may include in particular:</p>
+            <ul class="legal-list">
+              <li>IP address</li>
+              <li>Date and time of access</li>
+              <li>Page or file accessed</li>
+              <li>Referrer URL</li>
+              <li>Browser type and browser version</li>
+              <li>Operating system used</li>
+              <li>Hostname of the accessing computer</li>
+              <li>Amount of data transferred</li>
+            </ul>
+            <p>This data is processed to technically provide the website, ensure its stability and security, and prevent misuse.</p>
+            <p>The legal basis for processing is Art. 6(1)(f) GDPR. Our legitimate interest lies in the secure, stable, and technically error-free provision of this website.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>4. Hosting</h2>
+            <p>This website is hosted by an external hosting provider.</p>
+            <p>The hosting provider processes personal data generated when visiting this website, in particular server log files. Processing is carried out for the technical provision, security, and stability of the website.</p>
+            <p>The legal basis is Art. 6(1)(f) GDPR. Where required, a data processing agreement pursuant to Art. 28 GDPR has been concluded with the hosting provider.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>5. Contact by email</h2>
+            <p>If you contact us by email, we process the data you provide. This may include in particular your name, email address, the content of your message, and any other voluntarily provided information.</p>
+            <p>Processing is carried out to handle your inquiry.</p>
+            <p>The legal basis is Art. 6(1)(b) GDPR if your inquiry relates to pre-contractual or contractual measures. In all other cases, processing is based on Art. 6(1)(f) GDPR. Our legitimate interest lies in handling and responding to inquiries.</p>
+            <p>The data will be deleted once the inquiry has been fully processed and no statutory retention obligations prevent deletion.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>6. Contact form</h2>
+            <p>This website may provide a form for license requests. If you use this form, we process the data you enter, in particular name, email address, phone number, company, region, country, license type, and message.</p>
+            <p>Processing is carried out to handle your license request. The legal basis is Art. 6(1)(b) GDPR if your inquiry relates to pre-contractual or contractual measures. In all other cases, processing is based on Art. 6(1)(f) GDPR.</p>
+            <p>No automatic confirmation email is sent to visitors.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>7. Cookies and local storage</h2>
+            <p>This website uses only technically necessary cookies where such cookies are required for operation of the website.</p>
+            <p>To store the language selected by the user, the language choice may be stored locally in the browser. This information is used for user-friendly presentation of the website and is not used for analytics, marketing, or tracking purposes.</p>
+            <p>Technically unnecessary cookies, in particular for analytics, marketing, or tracking purposes, are not used unless stated otherwise in this privacy policy.</p>
+            <p>Under Section 25 TDDDG, storing information on a device or accessing information already stored on a device generally requires consent. An exception applies if this is strictly necessary to provide a digital service expressly requested by the user.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>8. Analytics and tracking tools</h2>
+            <p>This website does not use analytics or tracking tools such as Google Analytics, Meta Pixel, TikTok Pixel, or comparable services.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>9. Newsletter</h2>
+            <p>This website does not offer a newsletter.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>10. User accounts and login</h2>
+            <p>No user accounts can be created on this website. There is no login area.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>11. Online shop and payment processing</h2>
+            <p>No products are sold online through this website. No payment processing takes place through the website.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>12. External services and embedded content</h2>
+            <p>To the current state of knowledge, this website does not use embedded content from external providers such as Google Maps, YouTube, Vimeo, Instagram, or comparable services.</p>
+            <p>If external content is integrated in the future, personal data may be transmitted to the respective providers. In that case, this privacy policy will be updated accordingly.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>13. Google Fonts</h2>
+            <p>This website uses fonts from the provider Google Fonts. The provider is Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland.</p>
+            <p>When the website is accessed, your browser may load the required fonts from Google servers. Your IP address may be transmitted to Google in the process. Google Fonts are used in the interest of a consistent and appealing presentation of the website. The legal basis is Art. 6(1)(f) GDPR.</p>
+            <p>Further information is available in Google's privacy information at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a>.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>14. Disclosure of personal data</h2>
+            <p>Personal data is disclosed to third parties only if this is required to provide the website, if there is a legal obligation, if you have consented, or if another legal basis under the GDPR applies.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>15. Storage period</h2>
+            <p>Personal data is stored only for as long as necessary for the respective purposes.</p>
+            <p>Where statutory retention obligations exist, storage takes place for the duration of those statutory obligations.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>16. Your rights</h2>
+            <p>Subject to the statutory requirements, you have the following rights:</p>
+            <ul class="legal-list">
+              <li>Right of access</li>
+              <li>Right to rectification</li>
+              <li>Right to erasure</li>
+              <li>Right to restriction of processing</li>
+              <li>Right to data portability</li>
+              <li>Right to object to processing</li>
+              <li>Right to withdraw consent with effect for the future</li>
+            </ul>
+            <p>To exercise your rights, you may contact us at any time at <a href="mailto:info@jackless.com">info@jackless.com</a>.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>17. Right to object under Art. 21 GDPR</h2>
+            <p>If personal data is processed on the basis of Art. 6(1)(f) GDPR, you have the right to object to this processing at any time on grounds relating to your particular situation.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>18. Right to lodge a complaint with a supervisory authority</h2>
+            <p>You have the right to lodge a complaint with a data protection supervisory authority if you believe that the processing of your personal data violates data protection law.</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>19. SSL or TLS encryption</h2>
+            <p>This website uses SSL or TLS encryption for security reasons.</p>
+            <p>You can recognize an encrypted connection by the browser address bar beginning with "https://".</p>
+          </section>
+
+          <section class="legal-section">
+            <h2>20. Changes to this privacy policy</h2>
+            <p>We reserve the right to update this privacy policy if technical, legal, or organizational changes occur.</p>
+            <p class="legal-note">Last updated: June 2026</p>
+          </section>
+        </article>
       </div>
     </main>
 
     <footer id="contact" class="site-footer">
       <div>
-        <p class="footer-brand">License Say Jackless</p>
-        <p>&copy; 2026 All Rights Reserved.</p>
+        <p class="footer-brand" data-i18n="footer.brand">License Say Jackless</p>
+        <p data-i18n="footer.rights">&copy; 2026 All Rights Reserved.</p>
       </div>
-      <nav class="footer-links" aria-label="Legal pages">
-        <a href="../imprint/index.html">Imprint</a>
-        <a href="../privacy-policy/index.html">Privacy Policy</a>
-        <a href="../terms-and-conditions/index.html">Terms & Conditions</a>
+      <nav class="footer-links" aria-label="Legal pages" data-i18n-aria-label="nav.legal">
+        <a href="../imprint/index.html" data-i18n="nav.imprint">Imprint</a>
+        <a href="../privacy-policy/index.html" data-i18n="nav.privacy">Privacy Policy</a>
+        <a href="../terms-and-conditions/index.html" data-i18n="nav.terms">Terms & Conditions</a>
       </nav>
       <a href="mailto:info@jackless.com">info@jackless.com</a>
     </footer>

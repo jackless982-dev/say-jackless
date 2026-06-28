@@ -12,45 +12,62 @@
     <link rel="preload" href="images/lookbook-grid.png" as="image">
     <link rel="preload" href="images/runway.png" as="image">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
   </head>
-  <body>
+  <body data-i18n-title="title.home" data-i18n-description="meta.home.description">
     <header class="site-header">
-      <a class="brand" href="#campaign" aria-label="License Say Jackless home">
+      <a class="brand" href="#campaign" aria-label="License Say Jackless home" data-i18n-aria-label="brand.aria">
         <span>License</span>
         <strong>Say Jackless</strong>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#campaign">Campaign</a>
-        <a href="#contact">Contact</a>
+      <nav class="nav-links" aria-label="Primary navigation" data-i18n-aria-label="nav.primary">
+        <a href="#campaign" data-i18n="nav.campaign">Campaign</a>
+        <a href="contact-license.html" data-i18n="nav.license">License Request</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
+      <div class="language-switcher" aria-label="Switch language" data-i18n-aria-label="language.label">
+        <button type="button" data-language-option="de" aria-pressed="true" data-i18n="language.de">DE</button>
+        <button type="button" data-language-option="en" aria-pressed="false" data-i18n="language.en">EN</button>
+      </div>
     </header>
 
     <main class="site-main">
-      <article id="campaign" class="campaign-board" aria-label="License Say Jackless campaign board">
-        <section class="top-mosaic" aria-label="Brand and lookbook">
+      <article id="campaign" class="campaign-board" aria-label="License Say Jackless campaign board" data-i18n-aria-label="home.board.aria">
+        <section class="top-mosaic" aria-label="Brand and lookbook" data-i18n-aria-label="home.mosaic.aria">
           <figure class="license-panel">
-            <img src="images/world-license.png" alt="License Say Jackless world map artwork">
+            <a
+              class="license-map-link"
+              href="contact-license.html?region=Worldwide%20%2F%20Multiple%20Regions"
+              aria-label="Open JACKLESS license request form"
+              data-i18n-aria-label="home.map.aria"
+            >
+              <img src="images/world-license.png" alt="License Say Jackless world map artwork" data-i18n-alt="home.map.alt">
+              <span class="license-map-message">
+                <span data-i18n="home.map.message">Click the map to request a JACKLESS license for your country or region.</span>
+                <span aria-hidden="true">→</span>
+              </span>
+            </a>
           </figure>
           <figure class="lookbook-mosaic">
-            <img src="images/lookbook-grid.png" alt="Four Say Jackless lookbook portraits in a grid">
+            <img src="images/lookbook-grid.png" alt="Four Say Jackless lookbook portraits in a grid" data-i18n-alt="home.lookbook.alt">
           </figure>
         </section>
 
         <figure class="runway-panel">
-          <img src="images/runway.png" alt="Two models walking the Say Jackless runway">
+          <img src="images/runway.png" alt="Two models walking the Say Jackless runway" data-i18n-alt="home.runway.alt">
         </figure>
 
-        <section class="climate-panels" aria-label="Sustainability and climate benefits">
+        <section class="climate-panels" aria-label="Sustainability and climate benefits" data-i18n-aria-label="home.climate.aria">
           <figure class="benefit-panel">
-            <img src="images/sustainability.png" alt="Back view of Say Jackless shirt with earth artwork">
+            <img src="images/sustainability.png" alt="Back view of Say Jackless shirt with earth artwork" data-i18n-alt="home.sustainability.alt">
           </figure>
           <figure class="benefit-panel">
-            <img src="images/climate.png" alt="Back view of Say Jackless shirt with glowing sun artwork">
+            <img src="images/climate.png" alt="Back view of Say Jackless shirt with glowing sun artwork" data-i18n-alt="home.climate.alt">
           </figure>
         </section>
 
         <footer class="campaign-slogan">
-          <h1>Lizenz für a better clima.</h1>
+          <h1 data-i18n="home.slogan">Lizenz für a better clima.</h1>
           <span aria-hidden="true" class="slogan-mark">⌾</span>
         </footer>
       </article>
@@ -58,13 +75,13 @@
 
     <footer id="contact" class="site-footer">
       <div>
-        <p class="footer-brand">License Say Jackless</p>
-        <p>Climate-minded menswear campaign.</p>
+        <p class="footer-brand" data-i18n="footer.brand">License Say Jackless</p>
+        <p data-i18n="footer.campaign">Climate-minded menswear campaign.</p>
       </div>
-      <nav class="footer-links" aria-label="Legal pages">
-        <a href="imprint/index.html">Imprint</a>
-        <a href="privacy-policy/index.html">Privacy Policy</a>
-        <a href="terms-and-conditions/index.html">Terms & Conditions</a>
+      <nav class="footer-links" aria-label="Legal pages" data-i18n-aria-label="nav.legal">
+        <a href="imprint/index.html" data-i18n="nav.imprint">Imprint</a>
+        <a href="privacy-policy/index.html" data-i18n="nav.privacy">Privacy Policy</a>
+        <a href="terms-and-conditions/index.html" data-i18n="nav.terms">Terms & Conditions</a>
       </nav>
       <a href="mailto:info@jackless.com">info@jackless.com</a>
     </footer>

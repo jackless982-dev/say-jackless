@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Request a JACKLESS license for a country, region, distribution, retail, franchise, or brand partnership."
+    >
+    <title>JACKLESS Interactive License Request</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body
+    class="license-request-page"
+    data-i18n-title="title.license"
+    data-i18n-description="meta.license.description"
+  >
+    <header class="site-header">
+      <a class="brand" href="index.html#campaign" aria-label="License Say Jackless home" data-i18n-aria-label="brand.aria">
+        <span>License</span>
+        <strong>Say Jackless</strong>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation" data-i18n-aria-label="nav.primary">
+        <a href="index.html#campaign" data-i18n="nav.campaign">Campaign</a>
+        <a href="contact-license.html" aria-current="page" data-i18n="nav.license">License Request</a>
+        <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="language-switcher" aria-label="Switch language" data-i18n-aria-label="language.label">
+        <button type="button" data-language-option="de" aria-pressed="true" data-i18n="language.de">DE</button>
+        <button type="button" data-language-option="en" aria-pressed="false" data-i18n="language.en">EN</button>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <section class="license-hero" aria-labelledby="license-request-title">
+        <div class="license-hero-copy">
+          <p class="license-kicker" data-i18n="license.kicker">JACKLESS licensing</p>
+          <h1 id="license-request-title" data-i18n="license.heading">JACKLESS Interactive License Request</h1>
+          <p data-i18n="license.intro">
+            Select your preferred region, country, and license type. Our team
+            will review your request and contact you directly.
+          </p>
+        </div>
+      </section>
+
+      <section class="license-form-section" aria-label="License request form" data-i18n-aria-label="license.form.aria">
+        <div class="license-form-shell">
+          <div class="license-form-intro">
+            <p class="license-form-label" data-i18n="license.form.label">Private brand inquiry</p>
+            <h2 data-i18n="license.form.heading">Tell us where JACKLESS should move next.</h2>
+            <p data-i18n="license.form.copy">
+              Requests are sent to the JACKLESS team only. No automatic
+              confirmation email will be sent to the visitor.
+            </p>
+          </div>
+
+          <form
+            id="license-request-form"
+            class="license-form"
+            action="/api/license-request"
+            method="post"
+            novalidate
+            data-endpoint="/api/license-request"
+          >
+            <input type="hidden" name="emailSubject" id="email-subject">
+            <input class="hidden-field" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="full-name"><span data-i18n="form.fullName">Full Name</span> <span aria-hidden="true">*</span></label>
+                <input id="full-name" name="fullName" type="text" autocomplete="name" required>
+                <p class="field-error" id="full-name-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="email"><span data-i18n="form.email">Contact Email</span> <span aria-hidden="true">*</span></label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  data-i18n-placeholder="form.email.placeholder"
+                  required
+                >
+                <p class="field-error" id="email-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="phone" data-i18n="form.phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel">
+                <p class="field-error" id="phone-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="company" data-i18n="form.company">Company Name</label>
+                <input id="company" name="company" type="text" autocomplete="organization">
+                <p class="field-error" id="company-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="region" data-i18n="form.region">Region</label>
+                <select id="region" name="region">
+                  <option value="" data-i18n="form.region.placeholder">Select a region</option>
+                  <option value="Europe" data-i18n="form.region.europe">Europe</option>
+                  <option value="North America" data-i18n="form.region.northAmerica">North America</option>
+                  <option value="South America" data-i18n="form.region.southAmerica">South America</option>
+                  <option value="Asia" data-i18n="form.region.asia">Asia</option>
+                  <option value="Africa" data-i18n="form.region.africa">Africa</option>
+                  <option value="Middle East" data-i18n="form.region.middleEast">Middle East</option>
+                  <option value="Oceania" data-i18n="form.region.oceania">Oceania</option>
+                  <option value="Worldwide / Multiple Regions" data-i18n="form.region.worldwide">Worldwide / Multiple Regions</option>
+                </select>
+                <p class="field-error" id="region-error"></p>
+              </div>
+
+              <div class="form-field">
+                <label for="country"><span data-i18n="form.country">Country</span> <span id="country-required-mark" aria-hidden="true">*</span></label>
+                <select id="country" name="country" autocomplete="country-name" required>
+                  <option value="">Select a country</option>
+                </select>
+                <p class="field-error" id="country-error"></p>
+              </div>
+
+              <div class="form-field form-field-wide">
+                <label for="license-type"><span data-i18n="form.licenseType">License Type</span> <span aria-hidden="true">*</span></label>
+                <select id="license-type" name="licenseType" required>
+                  <option value="" data-i18n="form.license.placeholder">Select a license type</option>
+                  <option value="Country License" data-i18n="form.license.country">Country License</option>
+                  <option value="Regional License" data-i18n="form.license.regional">Regional License</option>
+                  <option value="Distribution License" data-i18n="form.license.distribution">Distribution License</option>
+                  <option value="Retail Partnership" data-i18n="form.license.retail">Retail Partnership</option>
+                  <option value="Franchise / Brand Partnership" data-i18n="form.license.franchise">Franchise / Brand Partnership</option>
+                  <option value="Other" data-i18n="form.license.other">Other</option>
+                </select>
+                <p class="field-error" id="license-type-error"></p>
+              </div>
+
+              <div class="form-field form-field-wide">
+                <label for="message" data-i18n="form.message">Message</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+                <p class="field-error" id="message-error"></p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="license-submit" type="submit" data-i18n="form.submit">Submit License Request</button>
+              <p class="license-email-note">
+                <span data-i18n="form.emailNote">Or email us directly at</span>
+                <a class="license-email-link" href="mailto:info@jackless.com">info@jackless.com</a>
+              </p>
+              <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div>
+        <p class="footer-brand" data-i18n="footer.brand">License Say Jackless</p>
+        <p data-i18n="footer.campaign">Climate-minded menswear campaign.</p>
+      </div>
+      <nav class="footer-links" aria-label="Legal pages" data-i18n-aria-label="nav.legal">
+        <a href="imprint/index.html" data-i18n="nav.imprint">Imprint</a>
+        <a href="privacy-policy/index.html" data-i18n="nav.privacy">Privacy Policy</a>
+        <a href="terms-and-conditions/index.html" data-i18n="nav.terms">Terms & Conditions</a>
+      </nav>
+      <a href="mailto:info@jackless.com">info@jackless.com</a>
+    </footer>
+  </body>
+</html>

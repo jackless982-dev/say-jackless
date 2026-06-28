@@ -279,8 +279,6 @@ figure {
 }
 
 .heat-copy {
-  right: clamp(18px, 4vw, 54px);
-  left: auto;
   width: min(42%, 300px);
 }
 
@@ -671,10 +669,6 @@ figure {
     top: clamp(18px, 6vw, 34px);
     left: clamp(18px, 6vw, 34px);
     width: min(42%, 230px);
-  }
-
-  .heat-copy {
-    right: auto;
   }
 
   .benefit-panel + .benefit-panel {
